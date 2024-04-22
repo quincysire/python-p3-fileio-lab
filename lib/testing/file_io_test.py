@@ -19,7 +19,7 @@ def test_append_file(tmp_path):
     append_file(file_name, append_content)
     with open(f'{file_name}.txt', 'r') as f:
         file_content_read = f.read()
-    assert file_content_read == file_content + append_content
+    assert file_content_read == file_content + "\n" + append_content
 
 def test_read_file(tmp_path):
     """Test read_file()"""
